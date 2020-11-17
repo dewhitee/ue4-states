@@ -3,12 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
-#ifndef ACTIONSTATE
-#define ACTIONSTATE(action_name) \
-void action_name(bool Is##action_name) { UpdateAction(Is##action_name, EActionState::##action_name); } \
-bool action_name() const { return States.Contains(EActionState::##action_name); }
-#endif
+#include "Generator.h"
 
 /** Set of actions (enums) with the corresponding accessors for each action
  *

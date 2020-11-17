@@ -3,12 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
-#ifndef CONDITIONSTATE
-#define CONDITIONSTATE(condition_name) \
-void condition_name(bool Is##condition_name) { UpdateCondition(Is##condition_name, EConditionState::##condition_name); } \
-bool condition_name() const { return States.Contains(EConditionState::##condition_name); }
-#endif
+#include "Generator.h"
 
 /** Set of states (enums) with the corresponding accessors for each state
  *
